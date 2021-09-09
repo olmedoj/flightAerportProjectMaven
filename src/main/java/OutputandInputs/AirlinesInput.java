@@ -1,34 +1,32 @@
 package OutputandInputs;
 
 import AirportFlight.Airline;
-
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AirlinesInput {
 
     Airline airlineClass = new Airline();
-    Scanner consola = new Scanner(System.in);
+    Handler consola = new Handler();
 
     //CREATE A METHOD TO INSER DATA ABOUT AIRLINE
+
     public Airline insertAirline(){
-
+        List<Airline> lst = new ArrayList<>();
         System.out.println("====AIRLINE====");
-
-        System.out.println("==============================");
+        consola.printlines();
 
         System.out.print("Enter the Airline Name" + " ");
-        airlineClass.setName(consola.nextLine());
+        airlineClass.setName(consola.Read().nextLine());
 
         System.out.print("Enter the code: " + " ");
-        airlineClass.setCode(consola.nextLine());
+        airlineClass.setCode(consola.Read().nextLine());
 
         System.out.print("Enter the craft: " + " ");
-        airlineClass.setAircraft(consola.nextLine());
+        airlineClass.setAircraft(consola.Read().nextLine());
 
-        System.out.println("==============================");
-
+        consola.printlines();
         return airlineClass;
-
     }
 
     //CREATE A METHOD TO SHOW DATA ABOUT AIRLINE
@@ -36,11 +34,11 @@ public class AirlinesInput {
     public Airline showDataAirline(){
 
         System.out.println("SHOWING DATA ABOUT AIRLINE");
-        System.out.println("==============================");
+        consola.printlines();
         System.out.println("Name: " + airlineClass.getName());
         System.out.println("Code: " + airlineClass.getCode());
         System.out.println("Aircraft: " + airlineClass.getAircraft());
-        System.out.println("==============================");
+        consola.printlines();
 
         return airlineClass;
     }

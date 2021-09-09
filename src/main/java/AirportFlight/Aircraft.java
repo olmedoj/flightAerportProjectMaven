@@ -6,12 +6,7 @@ import lombok.Setter;
 public class Aircraft {
 
     //CREATE VARIABLES AND USING LAMBOK TO CREATE METHOD
-    @Getter @Setter
-    String model;
-
-    @Getter @Setter
-    int capacity;
-
-    @Getter @Setter
-    boolean rangeTanks;
+    @Getter @Setter String model;
+    @Getter @Setter int capacity;
+    @Getter @Setter boolean rangeTanks;
 }

@@ -2,27 +2,25 @@ package OutputandInputs;
 
 import AirportFlight.Flight;
 
-import java.util.Scanner;
-
 public class FlightInput {
 
     Flight flight = new Flight();
-    Scanner consola = new Scanner(System.in);
+    Handler consola = new Handler();
 
     public Flight insertDataFlight(){
         System.out.println("====FLIGHT====");
 
         System.out.print("Enter ID: " + " ");
-        flight.setId(consola.nextLine());
+        flight.setId(consola.Read().nextLine());
 
         System.out.print("Enter Country of Origin" + " ");
-        flight.setCountryOrigin(consola.nextLine());
+        flight.setCountryOrigin(consola.Read().nextLine());
 
         System.out.print("Enter Destination" + " ");
-        flight.setDestination(consola.nextLine());
+        flight.setDestination(consola.Read().nextLine());
 
         System.out.print("Enter Airline: " + " ");
-        flight.setAirline(consola.nextLine());
+        flight.setAirline(consola.Read().nextLine());
 
         return flight;
     }
@@ -31,15 +29,13 @@ public class FlightInput {
     public Flight ShowDataFlight(){
 
         System.out.println("SHOWING DATA ABOUT FLIGHT");
-
-        System.out.println("==============================");
+        consola.printlines();
 
         System.out.println("ID: " + flight.getId());
         System.out.println("Country of Origin: " + flight.getCountryOrigin());
         System.out.println("Destination: " + flight.getDestination());
         System.out.println("Airline: " + flight.getAirline());
-
-        System.out.println("==============================");
+        consola.printlines();
 
 
         return flight;
