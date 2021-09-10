@@ -12,8 +12,8 @@ public class Handler {
 
     //Catch Data form keyboard
     public Scanner Read(){
-        Scanner consola = new Scanner(System.in);
-        return consola;
+        Scanner consol = new Scanner(System.in);
+        return consol;
     }
 
     //Pause the Views
@@ -59,48 +59,48 @@ public class Handler {
             System.out.print("\n Choose an Option: ");
             option = Read().nextInt();
 
-        switch(option){
+            switch(option){
 
-            case 1: airportInputs.insertDataAirport();
-                    System.out.println("The data was success");
-                    pausar();
-                    break;
-            case 2: airline.insertAirline();
-                    System.out.println("The data was success");
-                    pausar();
-                    break;
-            case 3: fly.insertDataFlight();
-                    System.out.println("The data was success");
-                    pausar();
-                    break;
-            case 4:  departure.insertDepartures();
-                    System.out.println("The data was success");
-                    pausar();
-                    break;
-            case 5: System.out.println(airportInputs.getDatAirport());
-                    pausar();
-                    break;
-            case 6: System.out.println(airline.showDataAirline());
-                    pausar();
-                    break;
-            case 7: System.out.println(fly.ShowDataFlight());
-                    pausar();
-                    break;
-            case 9: System.out.println(departure.showDataDeparture());
-                    pausar();
-                    break;
-            case 10: email.sendEmail();
-                    pausar();
-                    break;
-            case 11: System.out.println(weather.WeatherInput());
-                    //weather.addWeather();
-                    pausar();
-                    break;
-            default: System.out.println("Opción de menú no valida");
-                    pausar();
-                    break;
+                case 1: airportInputs.insertDataAirport();
+                        System.out.println("The data was success");
+                        pausar();
+                        break;
+                case 2: airline.insertAirline();
+                        System.out.println("The data was success");
+                        pausar();
+                        break;
+                case 3: fly.insertDataFlight();
+                        System.out.println("The data was success");
+                        pausar();
+                        break;
+                case 4:  departure.insertDepartures();
+                        System.out.println("The data was success");
+                        pausar();
+                        break;
+                case 5: System.out.println(airportInputs.getDatAirport());
+                        pausar();
+                        break;
+                case 6: System.out.println(airline.showDataAirline());
+                        pausar();
+                        break;
+                case 7: System.out.println(fly.ShowDataFlight());
+                        pausar();
+                        break;
+                case 9: System.out.println(departure.showDataDeparture());
+                        pausar();
+                        break;
+                case 10: email.sendEmail();
+                        pausar();
+                        break;
+                case 11: System.out.println(weather.WeatherInput());
+                        //weather.addWeather();
+                        pausar();
+                        break;
+                default: System.out.println("Opción de menú no valida");
+                        pausar();
+                        break;
 
-        }
+            }
         }while(option != 0);
 
     }
